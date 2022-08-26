@@ -39,6 +39,8 @@ namespace API
             {
                 opt.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
             });
+            //CORS
+            services.AddCors();
         }
 
         // This method gets called by the runtime. 
@@ -55,6 +57,12 @@ namespace API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            //CORS needs to take place after routing in the middleware
+
+            app.UseCors(opt => {
+                opt.AllowAnyHeader().AllowAnyMethod().AllowAnyHeader().WithOrigins("http://localhost:3000");
+            });
 
             app.UseAuthorization();
 
