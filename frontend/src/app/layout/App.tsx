@@ -1,6 +1,11 @@
 import { Container, createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import { useState } from "react";
+import { Route } from "react-router-dom";
+import AboutPage from "../../features/about/AboutPage";
 import Catalog from "../../features/Catalog/Catalog";
+import ProductDetails from "../../features/Catalog/ProductDetails";
+import ContactPage from "../../features/contact/ContactPage";
+import HomePage from "../../features/home/HomePage";
 import Header from "./Header";
 
 function App() {
@@ -34,7 +39,12 @@ function App() {
       handleModeChange={handleModeChange} 
     />
     <Container>
-      <Catalog />
+    {/* exact means to only show if the url is that exact path */}
+      <Route path='/' exact component={HomePage} /> 
+      <Route path='/catalog' exact component={Catalog} />
+      <Route path='/catalog/:id' component={ProductDetails} />
+      <Route path='/contact' component={ContactPage} />
+      <Route path='/about' component={AboutPage} />
     </Container>
     </ThemeProvider>
       
