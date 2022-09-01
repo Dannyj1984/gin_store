@@ -9,12 +9,11 @@ interface Props {
 export default function ProductCard({product} : Props) {
     return (
         <>
-        <Card>
+        <Card raised>
             <CardHeader
                 avatar={
                     <Avatar sx={{bgcolor: 'secondary.main'}}>
                         {product.name.charAt(0).toUpperCase()}
-                        
                     </Avatar>
                 }
                 title={product.name}

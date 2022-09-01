@@ -41,7 +41,8 @@ namespace API.Middleware;
                 var response = new ProblemDetails
                 {
                     Status = 500,
-                    Detail = _env.IsDevelopment() ? ex.StackTrace?.ToString() : null
+                    Detail = _env.IsDevelopment() ? ex.StackTrace?.ToString() : null,
+                    Title = ex.Message
                 };
 
                 var options = new JsonSerializerOptions{PropertyNamingPolicy = 
