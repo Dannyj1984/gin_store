@@ -64,7 +64,7 @@ namespace API
             //CORS needs to take place after routing in the middleware
 
             app.UseCors(opt => {
-                opt.AllowAnyHeader().AllowAnyMethod().AllowAnyHeader().WithOrigins("http://localhost:3000");
+                opt.AllowAnyHeader().AllowAnyMethod().AllowCredentials().WithOrigins("http://localhost:3000");
             });
 
             app.UseAuthorization();
