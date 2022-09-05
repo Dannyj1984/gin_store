@@ -18,7 +18,7 @@ useEffect(() => {
 }, [])
 
 if(loading) {
-    return <LoadingComponent message = 'Loading Members' />
+    return <LoadingComponent message = 'Loading Products' />
 }
 
     return (
