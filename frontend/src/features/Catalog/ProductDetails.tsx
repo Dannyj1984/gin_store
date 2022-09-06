@@ -53,7 +53,7 @@ export default function ProductDetails() {
 
     }
 
-    if(apiCall) return <LoadingComponent message='Loading member details' />
+    if(apiCall) return <LoadingComponent message='Loading product details' />
 
     if(!product) return ( <NotFound />)
 

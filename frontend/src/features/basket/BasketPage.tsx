@@ -55,12 +55,18 @@ export default function BasketPage() {
                     >
                     <TableCell component="th" scope="row">
                         <Box display='flex' alignItems='center'>
-                            <img 
+                            {/* Image and link to product details */}
+                            <Button
+                                component={Link}
+                                to={`/catalog/${item.productId}`}
+                            >
+                                <img 
                                 src={item.pictureUrl} 
                                 alt={item.name} 
                                 style={{height: 50, 
                                 marginRight: 20}} 
                             />
+                    </Button>
                             <span>{item.name}</span>
                         </Box>
                     </TableCell>
