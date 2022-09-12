@@ -19,7 +19,7 @@ namespace API.Controllers
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
-        public async Task<IActionResult> Get()
+        public Task<IActionResult> Get()
         {
             return null;
         }
