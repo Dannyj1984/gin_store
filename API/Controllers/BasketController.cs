@@ -78,8 +78,8 @@ namespace API.Controllers
             }
 
             return await _context.Baskets
-                .Include(i => i.Items) // tell to return basket items
-                .ThenInclude(p => p.Product) //tell to return basket details
+                .Include(i => i.Items) 
+                .ThenInclude(p => p.Product) 
                 .FirstOrDefaultAsync(x => x.BuyerId == buyerId);
         }
 

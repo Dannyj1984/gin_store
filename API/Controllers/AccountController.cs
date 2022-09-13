@@ -36,12 +36,17 @@ namespace API.Controllers
 
             var anonBasket = await RetrieveBasket(Request.Cookies["buyerId"]);
 
+            //if there is an anonymous basket, and a basket exists on the server for the logged in user
+            //Remove the basket on the server and replace the anonymous basket buyerId with the logged in users username
+            //Delete the buyId in the cookies.
             if (anonBasket != null)
             {
-                if(userBasket != null) _context.Baskets.Remove(userBasket);
-                anonBasket.BuyerId = user.UserName;
-                Response.Cookies.Delete("buyerId");
-                await _context.SaveChangesAsync();
+                if(userBasket != null) 
+                    _context.Baskets.Remove(userBasket);
+                    anonBasket.BuyerId = user.UserName;
+                    Response.Cookies.Delete("buyerId");
+                    await _context.SaveChangesAsync();
+                
             }
 
             return new UserDto
@@ -97,11 +102,22 @@ namespace API.Controllers
                 Response.Cookies.Delete("buyerId");
                 return null;
             }
-        Console.WriteLine(buyerId);
             return await _context.Baskets
                 .Include(i => i.Items) // tell to return basket items
                 .ThenInclude(p => p.Product) //tell to return basket details
-                .FirstOrDefaultAsync(x => x.BuyerId == buyerId);
+                .FirstOrDefaultAsync(x => x.BuyerId.ToLower() == buyerId.ToLower());
+        }
+
+
+        //If the user logging in already has a basket on the server,
+        //combine that basket with the anonymous basket
+        private Basket MergeBaskets(Basket anonBasket, Basket userBasket)
+        {
+            foreach (var item in anonBasket.Items)
+            {
+                userBasket.AddItem(item.Product, item.Quantity);
+            }
+            return userBasket;
         }
     }
 }
