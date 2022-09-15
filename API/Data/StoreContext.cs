@@ -1,11 +1,12 @@
 using API.Entities;
+using API.Entities.OrderAggregate;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Data
 {
-    public class StoreContext : IdentityDbContext<User> //Derive from DBContext class
+    public class StoreContext : IdentityDbContext<User, Role, int> //Derive from DBContext class
     {
         public StoreContext(DbContextOptions options) : base(options) //DbContext is base class
         {
@@ -17,15 +18,23 @@ namespace API.Data
 
         public DbSet<Basket> Baskets { get; set; }
 
+        public DbSet<Order> Orders { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
 
+            builder.Entity<User>()
+            .HasOne(a => a.Address)
+            .WithOne()
+            .HasForeignKey<UserAddress>(a => a.Id)
+            .OnDelete(DeleteBehavior.Cascade);
+
             //Add data to db on migration
-            builder.Entity<IdentityRole>()
+            builder.Entity<Role>()
                 .HasData(
-                    new IdentityRole{Name="Member", NormalizedName= "MEMBER"},
-                    new IdentityRole{Name="Admin", NormalizedName= "ADMIN"}
+                    new Role{Id=1, Name="Member", NormalizedName= "MEMBER"},
+                    new Role{Id=2, Name="Admin", NormalizedName= "ADMIN"}
                 );
         }
     }

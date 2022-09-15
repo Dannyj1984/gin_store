@@ -6,8 +6,10 @@ using Microsoft.AspNetCore.Identity;
 
 namespace API.Entities
 {
-    public class User : IdentityUser // all properties available from identyUser class
+    // all properties available from identyUser class,<> override to use int as primary key
+    public class User : IdentityUser<int> 
     {
-        
+        //Create 1-1 relationship between User and UserAddress
+        public UserAddress Address { get; set; }
     }
 }

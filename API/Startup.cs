@@ -74,7 +74,7 @@ namespace API
             {
                 opt.User.RequireUniqueEmail = true; //force unique email
             })
-                .AddRoles<IdentityRole>()
+                .AddRoles<Role>()
                 .AddEntityFrameworkStores<StoreContext>(); // adds all of identity tables
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(opt => 
