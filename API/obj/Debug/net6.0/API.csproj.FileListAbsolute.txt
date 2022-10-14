@@ -64,3 +64,10 @@ C:\Users\danny\Documents\GitHub\gin_store\API\bin\Debug\net6.0\Microsoft.Identit
 C:\Users\danny\Documents\GitHub\gin_store\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\danny\Documents\GitHub\gin_store\API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\danny\Documents\GitHub\gin_store\API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\danny\Documents\GitHub\gin_store\API\bin\Debug\net6.0\API.staticwebassets.runtime.json
+C:\Users\danny\Documents\GitHub\gin_store\API\bin\Debug\net6.0\Npgsql.dll
+C:\Users\danny\Documents\GitHub\gin_store\API\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\danny\Documents\GitHub\gin_store\API\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\danny\Documents\GitHub\gin_store\API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\danny\Documents\GitHub\gin_store\API\bin\Debug\net6.0\CloudinaryDotNet.dll
+C:\Users\danny\Documents\GitHub\gin_store\API\bin\Debug\net6.0\Newtonsoft.Json.dll
