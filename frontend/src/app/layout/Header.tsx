@@ -70,6 +70,14 @@ const itemCount = basket?.items.reduce((sum, item) => sum + item.quantity, 0)
                                 {title.toUpperCase()}
                             </ListItem>
                         ))}
+                        {user && user.roles?.includes('Admin') &&
+                        <ListItem 
+                                component={NavLink}
+                                to={'/inventory'}
+                                sx={navStyles}
+                            >
+                                INVENTORY
+                            </ListItem>}
                     </List>
                 <Box display='flex' alignItems='center'>
                     <IconButton component={Link} to='/basket' size="large" sx={{color: 'inherit'}}>

@@ -12,7 +12,7 @@ export default function ProductCardSkeleton() {
         <Grid item xs component={Card}>
             <CardHeader
                 avatar={
-                    <Skeleton animation="wave" variant="circular" width={40} height={40} />
+                    <Skeleton animation="pulse" variant="circular" width={40} height={40} />
                 }
                 title={
                     <Skeleton
