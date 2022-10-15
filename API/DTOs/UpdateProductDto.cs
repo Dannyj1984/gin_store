@@ -17,7 +17,7 @@ namespace API.DTOs
         [Required]
         [Range(100, Double.PositiveInfinity)]
         public long Price { get; set; } //Stripe payment processor using long + sqlite doesnt know decimal
-        public IFormFile PictureUrl { get; set; }
+        public IFormFile File { get; set; }
         [Required]
         public string Type { get; set; }
         [Required]
