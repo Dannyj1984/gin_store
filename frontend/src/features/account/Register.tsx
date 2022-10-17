@@ -27,6 +27,10 @@ export default function Register() {
                     setError('email', { message: error })
                 } else if (error.includes('Username')) {
                     setError('username', { message: error })
+                } else if (error.includes('First')) {
+                    setError('firstName', {message: error})
+                } else if (error.includes('surname')) {
+                    setError('surname', {message: error})
                 }
             });
         }
@@ -59,6 +63,24 @@ export default function Register() {
                     {...register('username', { required: 'Username is required' })}
                     error={!!errors.username}
                     helperText={errors?.username?.message?.toString()}
+                />
+                <TextField
+                    margin="normal"
+                    fullWidth
+                    label="First Name"
+                    autoFocus
+                    {...register('firstName', { required: 'First name is required' })}
+                    error={!!errors.firstName}
+                    helperText={errors?.firstName?.message?.toString()}
+                />
+                <TextField
+                    margin="normal"
+                    fullWidth
+                    label="Surname"
+                    autoFocus
+                    {...register('surname', { required: 'Surname is required' })}
+                    error={!!errors.surname}
+                    helperText={errors?.surname?.message?.toString()}
                 />
                 <TextField
                     margin="normal"

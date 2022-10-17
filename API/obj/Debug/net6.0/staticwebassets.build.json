@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kwwdWa1PdKSdCPX3CDfMcHVN2AlgLuVxPi3nJhZBFv8=",
+  "Hash": "CdQM3puFxZNO4b4ARkGEVPZ1O7B/IStMFZcPh4MM6tg=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -612,12 +612,12 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\787.cda612ba.chunk.js.map"
     },
     {
-      "Identity": "C:\\Users\\danny\\Documents\\GitHub\\gin_store\\API\\wwwroot\\static\\js\\main.7606c8bf.js",
+      "Identity": "C:\\Users\\danny\\Documents\\GitHub\\gin_store\\API\\wwwroot\\static\\js\\main.55262570.js",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\danny\\Documents\\GitHub\\gin_store\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "static/js/main.7606c8bf.js",
+      "RelativePath": "static/js/main.55262570.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -626,15 +626,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.7606c8bf.js"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.55262570.js"
     },
     {
-      "Identity": "C:\\Users\\danny\\Documents\\GitHub\\gin_store\\API\\wwwroot\\static\\js\\main.7606c8bf.js.LICENSE.txt",
+      "Identity": "C:\\Users\\danny\\Documents\\GitHub\\gin_store\\API\\wwwroot\\static\\js\\main.55262570.js.LICENSE.txt",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\danny\\Documents\\GitHub\\gin_store\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "static/js/main.7606c8bf.js.LICENSE.txt",
+      "RelativePath": "static/js/main.55262570.js.LICENSE.txt",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -643,15 +643,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.7606c8bf.js.LICENSE.txt"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.55262570.js.LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\danny\\Documents\\GitHub\\gin_store\\API\\wwwroot\\static\\js\\main.7606c8bf.js.map",
+      "Identity": "C:\\Users\\danny\\Documents\\GitHub\\gin_store\\API\\wwwroot\\static\\js\\main.55262570.js.map",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\danny\\Documents\\GitHub\\gin_store\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "static/js/main.7606c8bf.js.map",
+      "RelativePath": "static/js/main.55262570.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -660,7 +660,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.7606c8bf.js.map"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.55262570.js.map"
     }
   ]
 }

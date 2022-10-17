@@ -25,6 +25,7 @@ import PrivateRoute from "./PrivateRoute";
 import Orders from "../../features/orders/Orders";
 import Inventory from "../../features/admin/Inventory";
 import InventorySkeleton from "../../features/admin/InventorySkeleton";
+import Profile from "../../features/account/Profile";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -87,6 +88,7 @@ function App() {
           <Route path='/basket' component={BasketPage} />
           <PrivateRoute path='/checkout' component={CheckoutPage} />
           <PrivateRoute path='/orders' component={Orders} />
+          <PrivateRoute path='/profile' component={Profile} />
           <PrivateRoute roles={['Admin']} path='/inventory' component={Inventory} />
           <Route path='/login' component={Login} />
           <Route path='/register' component={Register} />

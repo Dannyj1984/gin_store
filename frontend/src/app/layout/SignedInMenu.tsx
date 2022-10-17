@@ -24,7 +24,7 @@ export default function SignedInMenu() {
                 onClick={handleClick}
                 sx={{ typography: 'h6' }}
             >
-                {user?.email}
+                {user?.firstName} {user?.surname}
             </Button>
             <Menu
                 anchorEl={anchorEl}
@@ -32,7 +32,7 @@ export default function SignedInMenu() {
                 onClose={handleClose}
                 TransitionComponent={Fade}
             >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                <MenuItem component={Link} to='/profile' onClick={handleClose}>Profile</MenuItem>
                 <MenuItem component={Link} to='/orders' onClick={handleClose}>My orders</MenuItem>
                 <MenuItem onClick={() => {
                     dispatch(signOut());
